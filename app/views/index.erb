@@ -1,6 +1,6 @@
-<div class="container">
-  <h1>Welcome to ChangList!</h1>
+<%= erb :header %>
 
+<div class="container">
   <table border="1" style="width:100%">
     <% @category_list.each do |category|%>
       <tr>
@@ -9,3 +9,4 @@
    <%end%>
  </table>
   </div>
+

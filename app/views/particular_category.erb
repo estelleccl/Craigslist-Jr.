@@ -1,3 +1,4 @@
+<%= erb :header %>
 <div class="container">
   <h1>Category: <%= @category.category %> </h1>
 
@@ -10,8 +11,6 @@
    <%end%>
  </table>
  
-  
-
 </div>
 <div class="form_css">
   <div class="add">
@@ -25,5 +24,5 @@
       Location:<textarea name = "location" placeholder="Poster location"></textarea><br>
       Postcode:<textarea name = "postcode" placeholder="Poster postcode"></textarea><br> 
       </textarea><br>
-      <input type = "submit" value = "Create Post!">
+    <button class="btn btn-primary" input type="submit">Create Post!</button>
 </form> </div></div>
