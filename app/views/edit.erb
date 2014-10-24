@@ -1,0 +1,19 @@
+<div id="top">
+<h1>Edit This Post:</h1>
+<p>
+<form action = "/categories/<%= @category_id %>/posts/<%= @post.id %>" method="post" id = "edit">
+  <input type="hidden" name="_method" value="put">
+    Post Title: <textarea name = "title" placeholder="Title: "><%= @post.title %></textarea><br>
+    Post Description: <textarea name = "description" placeholder="Description: "><%= @post.description %></textarea><br>
+    Post Compensation: <textarea name = "compensation" placeholder="Compensation "><%= @post.compensation %></textarea><br>
+    Poster Name:<textarea name = "poster_name" placeholder="Poster Name "><%= @post.poster_name %></textarea><br>
+    Poster email:<textarea name = "email" placeholder="Poster Email"> <%= @post.email %></textarea><br> 
+    Poster phone number:<textarea name = "phone_number" placeholder="Poster phone number "><%= @post.phone_number %></textarea><br>
+    Location:<textarea name = "location" placeholder="Poster Location "><%= @post.location %></textarea><br>
+    Postcode:<textarea name = "postcode" placeholder="Poster Postcode "><%= @post.postcode %></textarea><br> 
+      </textarea><br>
+   <input type = "submit" value = "Edit Post">
+</form>
+</p>
+</div>
+

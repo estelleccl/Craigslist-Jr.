@@ -1,0 +1,29 @@
+<div class="container">
+  <h1>Category: <%= @category.category %> </h1>
+
+  <h2>Posts for this category:</h2>
+  <table border="1" style="width:100%">
+    <% @posts.each do |post|%>
+      <tr>
+        <p id = "posts"><a href = "/posts/<%= post.id %>"><%= post.title%></a></p>
+      </tr>
+   <%end%>
+ </table>
+ 
+  
+
+</div>
+<div class="form_css">
+  <div class="add">
+ <form action = "/categories/<%= @category.id %>/new" method = "post">
+      Post Title: <textarea name = "title" placeholder="Post title"></textarea><br>
+      Post Description: <textarea name = "description" placeholder="Post description"></textarea><br>
+      Post Compensation: <textarea name = "compensation" placeholder="Compensation"></textarea><br>
+      Poster Name:<textarea name = "poster_name" placeholder="Poster name"></textarea><br>
+       Poster email:<textarea name = "email" placeholder="Poster email"></textarea><br>
+      Poster phone number:<textarea name = "phone_number" placeholder="Poster phone number"></textarea><br>
+      Location:<textarea name = "location" placeholder="Poster location"></textarea><br>
+      Postcode:<textarea name = "postcode" placeholder="Poster postcode"></textarea><br> 
+      </textarea><br>
+      <input type = "submit" value = "Create Post!">
+</form> </div></div>
