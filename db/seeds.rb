@@ -6,7 +6,7 @@ class CategoryImporter
     categories_list = ["job offered", "gig offered", "resume / job wanted", "housing offered", "housing wanted"]
     
     categories_list.each do |name|
-      Category.create(category: name)
+      Category.create(name: name)
     end
   end
 end
@@ -28,7 +28,7 @@ class PostImporter
   end
 end
 
-def create_key(len=4)
+def create_key(len=10)
   SecureRandom.hex(len)
 end
 

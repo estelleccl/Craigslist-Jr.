@@ -1,10 +1,15 @@
-<%= erb :header %>
 
 <div class="container">
+  <a class="brand"><b>Welcome to ChangList!</b></a>
+
+</div>
+
+<div class="container">
+  
   <table border="1" style="width:100%">
     <% @category_list.each do |category|%>
       <tr>
-        <p id = "categories"><a href = "/categories/<%= category.id %>"><%=category.category%></a></p>
+        <p id = "categories"><a href = "/categories/<%= category.id %>"><%=category.name%></a></p>
       </tr>
    <%end%>
  </table>

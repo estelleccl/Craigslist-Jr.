@@ -1,8 +1,9 @@
-<%= erb :header %>
-<div class="container">
-  <h1>Category: <%= @category.category %> </h1>
 
-  <h2>Posts for this category:</h2>
+<div class="container">
+  <br><h1><b>Category: <%= @category.name %> </b></h1><br><br>
+
+  <h2><b>Posts for this category:</b></h2>
+  <div class="container">
   <table border="1" style="width:100%">
     <% @posts.each do |post|%>
       <tr>
@@ -10,10 +11,12 @@
       </tr>
    <%end%>
  </table>
+  </div>
  
 </div>
 <div class="form_css">
   <div class="add">
+      <h2><b>New post:</b></h2><br>
  <form action = "/categories/<%= @category.id %>/new" method = "post">
       Post Title: <textarea name = "title" placeholder="Post title"></textarea><br>
       Post Description: <textarea name = "description" placeholder="Post description"></textarea><br>
